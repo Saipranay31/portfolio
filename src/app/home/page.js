@@ -1,5 +1,7 @@
 'use client';
 import './home.css';
+import Image from 'next/image';
+
 import { FaLinkedin, FaGithub, FaTwitter, FaInstagram } from 'react-icons/fa';
 import Navbar from '@/Components/navbar';
 export default function HomePage() {
@@ -16,7 +18,15 @@ export default function HomePage() {
       <Navbar/>
       <section className="home">
         <div className="home-img">
-          <img src="/main.jpg" alt="profile" />
+         <Image
+  src="/main.jpg"
+  alt="profile"
+  width={300}  // choose appropriate width
+  height={300} // choose appropriate height
+  style={{ borderRadius: '50%' }} // optional styling if you want a circle profile pic
+/>
+
+
         </div>
 
         <div className="home-content">

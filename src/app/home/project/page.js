@@ -4,6 +4,8 @@ import React, { useEffect, useState } from "react";
 import styles from "./projects.module.css";
 import { FaGithub } from "react-icons/fa";
 import Navbar from "@/Components/navbar";
+import Image from 'next/image';
+
 
 export default function ProjectsPage() {
   const [projects, setProjects] = useState([]);
@@ -42,11 +44,15 @@ export default function ProjectsPage() {
               transform: "translateY(20px)",
             }}
           >
-            <img
-              src={project.image}
-              alt={project.title}
-              className={styles.projectImage}
-            />
+           <Image
+  src={project.image}
+  alt={project.title}
+  className={styles.projectImage}
+  width={500}   // adjust width as needed
+  height={300}  // adjust height as needed
+  style={{ objectFit: 'cover' }} // optional, if you want styling like CSS background-size: cover
+/>
+
             <h3 className={styles.projectTitle}>{project.title}</h3>
             <p className={styles.projectDescription}>{project.description}</p>
             <a
