@@ -2,8 +2,9 @@
 import './home.css';
 import Image from 'next/image';
 
-import { FaLinkedin, FaGithub, FaTwitter, FaInstagram } from 'react-icons/fa';
+import { FaLinkedin, FaGithub } from 'react-icons/fa';
 import Navbar from '@/Components/navbar';
+
 export default function HomePage() {
   return (
     <>
@@ -15,54 +16,49 @@ export default function HomePage() {
         referrerPolicy="no-referrer"
       />
 
-      <Navbar/>
+      <Navbar />
       <section className="home">
         <div className="home-img">
-         <Image
-  src="/main.jpg"
-  alt="profile"
-  width={300}  // choose appropriate width
-  height={300} // choose appropriate height
-  style={{ borderRadius: '50%' }} // optional styling if you want a circle profile pic
-/>
-
-
+          <Image
+            src="/main.jpg"
+            alt="profile"
+            width={300}
+            height={300}
+            style={{ borderRadius: '50%' }}
+          />
         </div>
 
         <div className="home-content">
           <h1>Hi, I am <span>Saipranay</span></h1>
-          <h3 className="typing-text">I'm a <span></span></h3>
+          <h3 className="typing-text">I&apos;m a <span></span></h3>
           <p>
-            Hello! I'm a Full Stack Developer and Software Engineer with a passion for building efficient,
+            Hello I&apos;m a Full Stack Developer and Software Engineer with a passion for building efficient,
             scalable, and user-friendly web applications. With a strong foundation in both frontend and backend
             development, I specialize in creating seamless digital experiences using modern technologies like
             JavaScript, React.js, Node.js, Express.js, and MongoDB (MERN Stack).
             <br /><br />
-            I'm also well-versed in Java programming and Data Structures & Algorithms, which allows me to write clean,
+            I&apos;m also well-versed in Java programming and Data Structures & Algorithms, which allows me to write clean,
             optimized code and solve complex problems with ease. I enjoy turning ideas into reality through code.
             <br /><br />
-            Currently, I'm focused on developing real-time projects, continuously learning new tools, and preparing myself
+            Currently, I&apos;m focused on developing real-time projects, continuously learning new tools, and preparing myself
             for cloud-native development using platforms like AWS.
           </p>
-          
+
           <div className="social-icons">
-            <a href="https:www.linkedin.com/in/saipranay-t-739b1a268"><FaLinkedin /></a>
+            <a href="https://www.linkedin.com/in/saipranay-t-739b1a268"><FaLinkedin /></a>
             <a href="https://github.com/Saipranay31"><FaGithub /></a>
-            
           </div>
 
-   <a href="/home/resume" className="btn">
-  View Resume
-</a>
+          <a href="/home/resume" className="btn">
+            View Resume
+          </a>
 
-
-         <a
-  href="mailto:saipranaytexample.com?subject=Freelance Opportunity&body=Hi Saipranay,%0D%0AI saw your portfolio and I'm interested in working with you."
-  className="btn"
->
-  Hire Me
-</a>
-
+          <a
+            href="mailto:saipranaytexample.com?subject=Freelance Opportunity&body=Hi Saipranay,%0D%0AI saw your portfolio and I'm interested in working with you."
+            className="btn"
+          >
+            Hire Me
+          </a>
         </div>
       </section>
     </>
