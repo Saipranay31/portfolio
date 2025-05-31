@@ -1,0 +1,89 @@
+.projectsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5rem; /* slightly bigger gap */
+  justify-content: center;
+  padding: 2rem 1rem 4rem; /* extra bottom padding */
+  padding-top: 200px; /* keep for navbar */
+  opacity: 0;
+  animation: fadeIn 0.8s ease forwards;
+  max-width: 1200px; /* limit max width for better centering */
+  margin: 0 auto; /* center container horizontally */
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+.projectCard {
+  background-color: #1e1e2f;
+  border-radius: 16px; /* slightly rounder corners */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.35); /* stronger shadow */
+  width: 440px; /* significantly larger card width */
+  padding: 2.5rem; /* more spacious content */
+  color: #f0f0f5;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  will-change: transform;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+
+.projectCard:hover {
+  transform: translateY(-12px) scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 216, 255, 0.6);
+}
+
+.projectImage {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 1.25rem;
+  transition: transform 0.3s ease;
+}
+
+.projectCard:hover .projectImage {
+  transform: scale(1.08);
+}
+
+.projectTitle {
+  font-size: 1.75rem; /* larger font */
+  margin-bottom: 0.75rem;
+  color: #00d8ff;
+  transition: color 0.3s ease;
+}
+
+.projectCard:hover .projectTitle {
+  color: #00ffff;
+}
+
+.projectDescription {
+  font-size: 1.1rem; /* slightly bigger */
+  margin-bottom: 1.25rem;
+  line-height: 1.5;
+  color: #cbd5e1;
+}
+
+.projectLink {
+  font-weight: 600;
+  color: #00d8ff;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: border-color 0.3s ease;
+}
+
+.projectLink:hover {
+  border-color: #00d8ff;
+  text-decoration: none;
+}
+
+@keyframes fadeInCard {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
