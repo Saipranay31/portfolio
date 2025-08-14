@@ -5,3 +5,6 @@ Dockerfile
 .git
 .gitignore
 .next
+.env
+.env.local
+

@@ -1,7 +1,7 @@
 # Use the official Node.js image
 FROM node:20
 
-# Set working directory inside the container
+# Set working directory
 WORKDIR /app
 
 # Copy package.json and package-lock.json
@@ -13,13 +13,14 @@ RUN npm install
 # Copy all project files
 COPY . .
 
+
 # Build the Next.js app
 
-ARG MONGO_URI
-ENV MONGODB_URI=$MONGODB_URI
+
 RUN npm run build
+
 # Expose the port Next.js runs on
 EXPOSE 3000
 
-# Start the app
-CMD ["npm", "start"]
+# Build and start when container starts (runtime)
+CMD ["sh", "-c", "npm run build && npm start"]
