@@ -16,6 +16,9 @@ COPY . .
 
 # Build the Next.js app
 
+# Pass the MongoDB URI as an argument and environment variable
+ARG MONGODB_URI
+ENV MONGODB_URI=$MONGODB_URI
 
 RUN npm run build
 
