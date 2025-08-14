@@ -14,8 +14,10 @@ RUN npm install
 COPY . .
 
 # Build the Next.js app
-RUN npm run build
 
+ARG MONGO_URI
+ENV MONGODB_URI=$MONGODB_URI
+RUN npm run build
 # Expose the port Next.js runs on
 EXPOSE 3000
 
