@@ -1,7 +1,7 @@
 import mongoose from 'mongoose';
 
 // Replace <db_password> with your actual password here directly
-const MONGODB_URI = "mongodb+srv://saipranayt314:saipranay12@cluster0.maeisbq.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0;"
+const MONGODB_URI = process.env.uri
 
 if (!MONGODB_URI) {
   throw new Error('Please define the MONGODB_URI connection string.');

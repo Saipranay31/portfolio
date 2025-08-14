@@ -1,5 +1,5 @@
-import { connectToDatabase } from "./lib/mongodb.js";
-import Project from "./models/project.js";
+import { connectToDatabase } from "../src/lib/mongodb.js";
+import Project from "../src/models/project.js";
 async function seed() {
   try {
     await connectToDatabase();
